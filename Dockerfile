@@ -6,10 +6,14 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
+
 COPY . /app/
 
 WORKDIR /app/babyshop_app
 
-EXPOSE 5000
 
-ENTRYPOINT ["sh","-c","python manage.py runserver 0.0.0.0:8025"]
+EXPOSE 8025
+
+
+
+ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:8025", "babyshop.wsgi:application"]
