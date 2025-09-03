@@ -1,10 +1,64 @@
 # E-Commerce Project For Baby Tools
 
-### TECHNOLOGIES
+## Introduction 
+This is a Readme Description of our Baby-Tools-Project. The Baby-Tools-Project is an Onlineshop for Babytools and Baby Clothes.
+
+### PREREQUISITIES
 
 - Python 3.9
-- Django 4.0.2
 - Venv
+
+## Table of Contents
+1. [Introduction](#Introduction)
+2. [Prerequisites](#PREREQUISITIES)
+3. [Quickstart](#Quickstart)  
+   - [Clone GitHub Repository](#Clone-github-Respository)  
+   - [Build Docker Image](#Build-Dockerimage)  
+4. [Usage](#Usage)
+   - [Creating-Superuser](#Creating-Superuser)  
+   - [Hints](#Hints)
+   - [Photos](#Photos)
+
+## Quickstart
+
+### Clone-github-Repository  
+1. Clone the following Github Repository on your VServer. 
+    ```
+    git clone git@github.com:SuperUsta/baby-tools-shop.git
+    ```
+### Build-Dockerimage 
+
+1. Be sure to add your ip at babyshop_app/settings.py
+    ```
+    ALLOWED_HOSTS = ['<your-server-ip>:8025']
+    ```
+
+2.  Build your Docker Image
+    ```
+    docker build -t babytool-shop -f Dockerfile .  
+    ```
+
+3.  Run your Build Docker image
+    ```
+    docker run -it -p 8025:8025 -v babytool_data:/app babytool-shop
+    ```
+## Usage
+
+### Creating-Superuser
+1. Navigate in your babyshop_shop folder 
+    ```
+    BABY-TOOLS-SHOP/babyshop_app
+    ```
+2. Create a new Superuser for Django Admin Panel: 
+    ```
+    python manage.py createsuperuser
+    ```
+    Added a username and a safty password and safe. 
+
+3. Navigate to Django Admin Panel and log in with your created superuser account. 
+    ```
+    <your-server-ip>:8025/admin
+    ```
 
 ### Hints
 
