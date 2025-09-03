@@ -47,7 +47,7 @@ This is a Readme Description of our Baby-Tools-Project. The Baby-Tools-Project i
 ### Creating-Superuser
 1. Navigate in your babyshop_shop folder 
     ```
-        BABY-TOOLS-SHOP/babyshop_app
+BABY-TOOLS-SHOP/babyshop_app
     ```
 2. Create a new Superuser for Django Admin Panel: 
     ```
