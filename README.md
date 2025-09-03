@@ -1,33 +1,32 @@
 # E-Commerce Project For Baby Tools
 
-### TECHNOLOGIES
+## Introduction 
+This is a Readme Description of our Baby-Tools-Project. The Baby-Tools-Project is an Onlineshop for Babytools and Baby Clothes.
+
+### PREREQUISITIES
 
 - Python 3.9
-- Django 4.0.2
 - Venv
-
 
 ## Table of Contents
 1. [Introduction](#Introduction)
-2. [Quickstart](#Quickstart)  
-   - [Clone GitHub Repository](#Clone-github-Resposiroty)  
-   - [Build-Docker-Image](#Build-Docker-Image)  
-3. [Usage](#Usage)
+2. [Prerequisites](#Prerequisites)
+3. [Quickstart](#Quickstart)  
+   - [Clone GitHub Repository](#Clone-github-Respository)  
+   - [Build Docker Image](#Build-Dockerimage)  
+4. [Usage](#Usage)
    - [Creating-Superuser](#Creating-Superuser)  
    - [Hints](#Hints)
    - [Photos](#Photos)
-
-## Introduction 
-This is a Readme Description of our Baby-Tools-Project. The Baby-Tools-Project is an Onlineshop for Babytools and Baby Clothes.
 
 ## Quickstart
 
 ### Clone-github-Repository  
 1. Clone the following Github Repository on your VServer. 
     ```
-    https://github.com/SuperUsta/baby-tools-shop
+    git clone git@github.com:SuperUsta/baby-tools-shop.git
     ```
-### Build-Docker-Image 
+### Build-Dockerimage 
 
 1. Be sure to add your ip at babyshop_app/settings.py
     ```
@@ -39,9 +38,9 @@ This is a Readme Description of our Baby-Tools-Project. The Baby-Tools-Project i
     docker build -t babytool-shop -f Dockerfile .  
     ```
 
-3.  Run your Build-Docker-image
+3.  Run your Build Docker image
     ```
-    docker run -it --rm -p 5002:8025 babytool-shop
+    docker run -it -p 5002:8025 -v babytool_data:/app babytool-shop
     ```
 ## Usage
 
@@ -54,7 +53,7 @@ This is a Readme Description of our Baby-Tools-Project. The Baby-Tools-Project i
     ```
     python manage.py createsuperuser
     ```
-    Add a username and a safty password and safe. 
+    Added a username and a safty password and safe. 
 
 3. Navigate to Django Admin Panel and log in with your created superuser account. 
     ```
@@ -90,4 +89,3 @@ This section will cover some hot tips when trying to interacting with this repos
 ##### Login Page
 
 <img alt="" src="https://github.com/MET-DEV/Django-E-Commerce/blob/master/project_images/capture_20220323081044867.jpg"></img>
-
