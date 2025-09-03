@@ -40,7 +40,7 @@ This is a Readme Description of our Baby-Tools-Project. The Baby-Tools-Project i
 
 3.  Run your Build Docker image
     ```
-    docker run -it -p 5002:8025 -v babytool_data:/app babytool-shop
+    docker run -it -p 8025:8025 -v babytool_data:/app babytool-shop
     ```
 ## Usage
 
