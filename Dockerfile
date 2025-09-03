@@ -16,7 +16,4 @@ RUN python manage.py migrate
 
 EXPOSE 8025
 
-
-##ENTRYPOINT ["sh","-c","python manage.py runserver 0.0.0.0:8025"]
-
 ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:8025", "babyshop.wsgi:application"]
