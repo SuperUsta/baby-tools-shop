@@ -57,7 +57,7 @@ This is a Readme Description of our Baby-Tools-Project. The Baby-Tools-Project i
 
 3. Navigate to Django Admin Panel and log in with your created superuser account. 
     ```
-    <localhost>/admin
+    <your-server-ip>:8025/admin
     ```
 
 ### Hints
